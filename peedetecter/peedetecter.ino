@@ -143,7 +143,7 @@ void httpPost(String content)
       client.println(content.length());
       client.println();
       client.println(content);
-      
+      Serial.println("send data");
       delay(200);
       
     } else {
@@ -161,11 +161,11 @@ void httpGet()
       client.print("/codebot/sendDummyMessage?type=1");
       client.println(" HTTP/1.1"); 
       client.print("Host: "); 
-      client.println("droidcode.tripedin.com1");
+      client.println("droidcode.tripedin.com");
 
       client.println("Connection: close");
       client.println();
-      
+      Serial.println("call uber");
       delay(200);
       
     } else {
